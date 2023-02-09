@@ -23,6 +23,11 @@ void CreateList(List *L)
 	First(*L) = Nil;
 }
 
+/* Input string */
+void inputString(infotype *input){
+	scanf(" %*s", &*input);
+}
+
 /**** Manajemen Memory ****/
 address Alokasi(infotype X)
 /* Mengirimkan address hasil alokasi sebuah elemen */

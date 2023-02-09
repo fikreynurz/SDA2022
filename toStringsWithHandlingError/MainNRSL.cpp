@@ -14,20 +14,24 @@ int main()
 		int i;
 		infotype isi;
 		address P, Prec;
-		infotype Strings[5];
+		infotype Strings;
+		char * arrayOfChar[5];
 	/* Program */
 	CreateList (&MyList);
 /* Menambah List di awal */
 	i = 1;
-	for (int i = 1; i <= 5; i++)
-	{
-		printf("Input nilai Strings index ke-%d: ", i);
-		scanf(" %s", &Strings[i]);
-	}
 	
+	// for (int i = 1; i <= 5; i++)
+	// {
+	// 	printf("input : ");
+	// 	scanf(" %[^\n]", Strings);
+	// }
+
 	while (i <= 5)
 	{
-		InsVFirst (&MyList, Strings[i]);
+		printf("Input nilai Strings ke-%d: ", i);
+		inputString(&Strings);
+		InsVFirst (&MyList, Strings);
 		i++;
 	}
 	printf ("Hasil InsVFirst 5 x adalah : "); PrintInfo (MyList);
